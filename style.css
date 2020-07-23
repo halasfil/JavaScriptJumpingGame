@@ -1,0 +1,88 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: rgb(71,71,71)	;
+}
+#container{
+	position: absolute;
+	left:50%;	
+	top:20%;
+	transform: translate(-50%, -20%);
+	background-color: #ffffff;
+}
+#game{
+	width: 500px;
+	height: 220px;
+	border: 1px solid black;
+}
+#gameWindow{
+	position: relative;
+	text-align: center;
+	top: 70px;
+}
+#gameStart{
+	position: relative;
+	text-align: center;
+	top: 70px;
+}
+#restartBtn:hover{
+	color: red;
+	cursor: pointer;
+}
+#startBtn a{
+	text-decoration: none;
+	color:black;
+}
+#startBtn a:hover{
+	color: red;
+}
+
+#character{
+	width: 32px;
+	height: 32px;
+	/*moving character*/
+	position: relative;
+	top: 170px;
+}
+#score {
+	position: relative;
+	bottom: 50px;
+	left: 300px;
+}
+.animate{
+	animation: jump 750ms;
+}
+#monster {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 150px;
+	left: 480px;
+	animation: block 1s infinite linear;
+}
+
+#floor {
+	width: 500px;
+	height: 20px;
+	position: relative;
+	top: 150px;
+
+}
+@keyframes block{
+	0%{left:480px;}
+	100%{left:-5px;}
+}
+@keyframes jump{
+	0%{top:168px;}
+	25%{top:120px;}
+	65%{top:120px;}
+	100%{top:168px;}
+}
+@keyframes floor{
+	0%{left:480px;}
+	100%{left:-10px;}
+}
+@keyframes myBackground{
+	0%{left:480px;}
+	100%{left:-10px;}
+}
